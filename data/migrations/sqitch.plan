@@ -1,0 +1,6 @@
+%syntax-version=1.0.0
+%project=ochamaille_sqitch
+
+ochamaille_v1_init 2022-07-04T15:42:07Z Yumicode <helene.dyn.nguyen@gmail.com> # 01 - Créations des tables
+ochamaille_v2_unaccent 2022-07-04T15:54:08Z Yumicode <helene.dyn.nguyen@gmail.com> # 02 - ajout du module unaccent
+ochamaille_v3_function 2022-07-04T15:55:38Z Yumicode <helene.dyn.nguyen@gmail.com> # 03 - ajout de la fonction

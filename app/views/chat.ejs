@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chill Room</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="/socket.io/socket.io.js" defer type="module"></script>
+    <script>const salon = '<%= salon %>';</script>
+    <script src="js/socket.js" defer type="module"></script>
+
+</head>
+
+<body>
+    <h1><a href="<%= chatLink %>" target="_blank"><%= chat %></a></h1>
+    <ul id="messages"></ul>
+    <form id="form" action="">
+        <input id="input" autocomplete="off" />
+        <button>Send</button>
+    </form>
+</body>
+
+</html>

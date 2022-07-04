@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'Chamaille</title>
+
+
+    <script src="js/main.js" defer type="module"></script>
+</head>
+
+<body>
+    <h1>O'Chamaille</h1>
+    <p>
+        <ul>
+            <li>minimum 4 caractères</li>
+            <li>maximum 15 caractères</li>
+            <li>majuscule sur la première lettre</li>
+            <li>aucun caractère spécial sauf le "-"</li>
+        </ul>
+    </p>
+    <form id="pseudo">
+        <input type="text" name="pseudo" pattern="^[A-Z][a-zA-Z-]{3,14}$">
+        <button>aller à la chamaille du jour</button>
+    </form>
+</body>
+
+</html>
