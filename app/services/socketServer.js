@@ -22,6 +22,15 @@ const io = new Server(
 );
 
 
+//! Reserved events
+// On each side, the following events are reserved and should not be used as event names by your application:
+
+// connect
+// connect_error
+// disconnect
+// disconnecting
+// newListener
+// removeListener
 
 //~ Gestion des canaux créés par Socket.io
 io.on('connection', socket => {
