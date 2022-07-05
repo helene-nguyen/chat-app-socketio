@@ -12,3 +12,7 @@ ___
 - Jest - Units tests
 - Postgres DB
 - EJS
+
+
+Error :
+\ ? * ()
