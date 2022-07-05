@@ -13,3 +13,6 @@ ___
 - Postgres DB
 - EJS
 
+
+Error :
+\ ? * ()
