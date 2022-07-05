@@ -97,6 +97,10 @@ app.use(_404);
 //~ LANCEMENT DU SERVEUR
 const PORT = process.env.PORT ?? 3000;
 
+// En cas d'erreur :
+// GET http://localhost:4100/socket.io/socket.io.js net::ERR_ABORTED 404 (Not Found)
+// il faut passer app.listen en server.listen
+
 server.listen(PORT, () => {
     logger('--------------------------------------------------------------');
     logger(`🚀 \x1b[1;35m Launch server on http://localhost:${PORT}\x1b[0m`);
