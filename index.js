@@ -14,6 +14,10 @@ import { createServer } from 'http';
 const server = createServer(app);
 
 
+//& Test pour la création de notre ErrorLoggerHandling et des logs
+// import { errorLoggerHandling } from './app/services/errorLoggerHandling.js';
+// errorLoggerHandling.manage({ message: 'Je génère une erreur' }, { url: '/test' });
+
 //~ CONFIG Socket.io
 import { Server } from 'socket.io';
 const io = new Server(

@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>O'Chamaille</title>
 
+    <link rel="stylesheet" href="css/style.css">
 
     <script src="js/main.js" defer type="module"></script>
 </head>
 
 <body>
     <h1>O'Chamaille</h1>
-    <p>
+    
+    <form id="pseudo"><p>
         <ul>
             <li>minimum 4 caractères</li>
             <li>maximum 15 caractères</li>
@@ -21,8 +23,10 @@
             <li>aucun caractère spécial sauf le "-"</li>
         </ul>
     </p>
-    <form id="pseudo">
-        <input type="text" name="pseudo" pattern="^[A-Z][a-zA-Z-]{3,14}$">
+        <div class="inputBox">
+            <input type="text" name="pseudo" class="pseudo" pattern="^[A-Z][a-zA-Z-]{3,14}$">
+            <span>Pseudo</span>
+        </div>
         <button>aller à la chamaille du jour</button>
     </form>
 </body>

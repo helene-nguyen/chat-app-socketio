@@ -1,15 +1,25 @@
 // Journalisation logger
 //~import modules
 import { formattedDate } from "../utils/formattedDate.js";
-
-//~resolve __dirname
-import path from "path";
-
 import * as fs from 'fs';
-import {fileURLToPath} from 'node:url';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+//~ resolve __dirname
+//& Méthode avec destructuring
+import { resolve, join } from "path";
+const __dirname = resolve(`./app/services`);
+// Ici resolve recupère le chemin jusqu'au root de notre api
+
+//& Méthode sans destructuring
+// import path from 'path';
+// const __dirname = path.resolve('../../logs/');
+
+//& Méthode autre 
+// import path from 'path';
+// import { fileURLToPath } from 'node:url';
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = path.dirname(__filename);
+
+console.log("__dirname: ", __dirname);
 
 //~ Logger
 import debug from 'debug';
@@ -36,8 +46,14 @@ const errorLoggerHandling = {
         const fileName = `${formattedDate}.log`;
         logger("Nom du fichier de log", fileName);
 
+
         // ajout d'une ligne au fichier de log (création de celui-ci s'il n'existe pas)
-        fs.appendFile(path.join(__dirname, `../../logs/${fileName}`), logMessage, (error) => {
+        //& Méthode 1
+        fs.appendFile(join(__dirname, `../../logs/${fileName}`), logMessage, (error) => {
+
+        //& Méthode 3
+        // fs.appendFile(path.join(__dirname, `../../logs/${fileName}`), logMessage, (error) => {
+
             if (error) logger(error);
         });
         logger(logMessage)
